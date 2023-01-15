@@ -1,4 +1,4 @@
-//Function below randomly selcts 'Rock', 'Paper', or 'Scissors'
+//Function below randomly selcts 'Rock', 'Paper', or 'Scissors'//
 function getComputerChoice() {
     let rock = 'Rock'
     let paper = 'Paper'
@@ -13,26 +13,27 @@ function getComputerChoice() {
     }
 }
 
-//Result of 'getComputerChoice' gets assigned to variable 'computerChoice'
+//Result of 'getComputerChoice' gets assigned to variable 'computerChoice'//
 let computerChoice = getComputerChoice()
 
 console.log(computerChoice)
 
-//Function below prompts user for choice of 'Rock', 'Paper', or 'Scissors' and returns results in lower case for case insensitivity
+//Function below prompts user for choice of 'Rock', 'Paper', or 'Scissors' and returns results in lower case for case insensitivity//
 function getPlayerChoice() {
     let playerChoice = prompt("Rock, Paper, or Scissors?")
-    if (playerChoice == "") {
+    if (typeof playerChoice === 'string') {
         return playerChoice.toLowerCase()
     } else {
         return undefined
     }
 }
-//Result of 'getPlayerChoice' gets assigned to variable 'playerChoice'
+
+//Result of 'getPlayerChoice' gets assigned to variable 'playerChoice'//
 let playerChoice = getPlayerChoice()
 
 console.log(playerChoice)
 
-//Function below plugs in 'playerChoice' and 'computerChoice' and alerts user of the choices and results
+//Function below plugs in 'playerChoice' and 'computerChoice' and alerts user of the choices and results//
 function playRound(playerChoice, computerChoice) {
     if (playerChoice === 'rock' && computerChoice === 'Scissors') {
         alert('Computer: Scissors \nYou: Rock \nRock beats scissors. You win!')
@@ -53,8 +54,8 @@ function playRound(playerChoice, computerChoice) {
     } else if (playerChoice === 'scissors' && computerChoice === 'Scissors') {
         alert('Computer: Scissors \nYou: Scissors \nIts a draw.')
     } else {
-        alert(`Computer: ${computerChoice} \nYou: \nNo contest. You need to make choice`)
-    }
+        alert(`Computer: ${computerChoice} \nYou: \nNo contest. You need to make choice.`)
+    } 
 }
 
 playRound(playerChoice, computerChoice)
