@@ -1,6 +1,6 @@
 # rock-paper-scissors
 
-rock-paper-scissors is a program which will allow the user to play rock/paper/scissors against a computer, on the console of the developer tools.
+rock-paper-scissors is a program which will allow the user to play rock/paper/scissors against a computer.
 
 Once entering the webpage, the user will recieve a prompt asking them to choose between rock, paper, and scissors. This input will be assigned to the user or "Player".
 
