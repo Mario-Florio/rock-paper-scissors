@@ -21,7 +21,11 @@ console.log(computerChoice)
 //Function below prompts user for choice of 'Rock', 'Paper', or 'Scissors' and returns results in lower case for case insensitivity
 function getPlayerChoice() {
     let playerChoice = prompt("Rock, Paper, or Scissors?")
-    return playerChoice.toLowerCase()
+    if (playerChoice == "") {
+        return playerChoice.toLowerCase()
+    } else {
+        return undefined
+    }
 }
 //Result of 'getPlayerChoice' gets assigned to variable 'playerChoice'
 let playerChoice = getPlayerChoice()
