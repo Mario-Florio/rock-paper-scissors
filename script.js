@@ -1,3 +1,4 @@
+//Declaring variables which will be used to keep track of game
 let playerScore = 0
 let computerScore = 0
 let roundNumber = 1
@@ -16,9 +17,6 @@ function getComputerChoice() {
     }
 }
 
-//Result of 'getComputerChoice' gets assigned to variable 'computerChoice'
-let computerChoice = getComputerChoice()
-
 //Function below prompts user for choice of 'Rock', 'Paper', or 'Scissors' and returns results in lower case for case insensitivity
 function getPlayerChoice() {
     let playerChoice = prompt(`Round ${roundNumber}\nRock, Paper, or Scissors?`)
@@ -31,9 +29,6 @@ function getPlayerChoice() {
 
 //Result of 'getPlayerChoice' gets assigned to variable 'playerChoice'
 //let playerChoice = getPlayerChoice()
-
-//Function below plugs in 'playerChoice' and 'computerChoice' and alerts user of the choices and results
-
 function playRound(playerChoice, computerChoice) {
     if (playerChoice === 'rock' && computerChoice === 'Scissors') {
         alert(`Computer: Scissors \nYou: Rock \nRock beats scissors. You win!`)
@@ -64,7 +59,7 @@ function playRound(playerChoice, computerChoice) {
     }
 }
 
-//Game
+//For loop which executes the playRound function 5 times, recording the number of rounds (in variable "roundNumber")
 for (let i = 1; i < 6; i++) {
     let computerChoice = getComputerChoice()
     console.log(`Computer: ${computerChoice}`)
@@ -77,6 +72,7 @@ for (let i = 1; i < 6; i++) {
     }
 }
 
+//If conditionals alerting the user of the results based on values of variables playerScore and computerScore. Also logs results in console
 if (playerScore > computerScore) {
     console.log("You won!")
     alert(`You: ${playerScore}\nComputer: ${computerScore}\nYou won!`)
